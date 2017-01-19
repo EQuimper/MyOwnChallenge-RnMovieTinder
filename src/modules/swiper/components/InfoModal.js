@@ -13,10 +13,8 @@ const InfoModal = ({ visible, movie, close }) => (
     <View style={styles.root}>
       <View style={styles.container}>
         <View style={styles.topContainer}>
-          <TouchableOpacity onPress={close}>
-            <View style={styles.closeButton}>
-              <FontAwesome name="close" color="#fff" size={50} />
-            </View>
+          <TouchableOpacity onPress={close} style={styles.closeButton}>
+            <FontAwesome name="close" color="#fff" size={50} />
           </TouchableOpacity>
           <Image
             source={{ uri: `${POSTER}/${movie.poster_path}` }}
