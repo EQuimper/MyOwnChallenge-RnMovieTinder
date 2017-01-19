@@ -38,6 +38,10 @@ class SwiperEL extends Component {
           renderCard={data => <Card {...data} />}
           handleYup={this._handleYup}
           handleNope={this._handleNope}
+          yupStyle={styles.yupStyle}
+          yupTextStyle={styles.yupTextStyle}
+          nopeStyle={styles.nopeStyle}
+          nopeTextStyle={styles.nopeTextStyle}
         />
         <ButtonsGroup info={this._clickInfo} dislike={this._clickDislike} like={this._clickLike} />
         <InfoModal close={this._clickInfo} visible={this.state.infoModal} movie={movies[this.state.cardIndex]} />
@@ -64,6 +68,30 @@ const styles = EStyleSheet.create({
     flex: 0.2,
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  yupStyle: {
+    borderColor: '$blueColor',
+    borderWidth: 2,
+    position: 'absolute',
+    padding: 20,
+    top: '25%',
+    borderRadius: 5,
+    left: '25%',
+  },
+  nopeStyle: {
+    borderColor: '$redColor',
+    borderWidth: 2,
+    position: 'absolute',
+    padding: 20,
+    top: '25%',
+    borderRadius: 5,
+    left: '25%',
+  },
+  nopeTextStyle: {
+    color: '$redColor'
+  },
+  yupTextStyle: {
+    color: '$blueColor'
   },
   titleStyle: {
     fontSize: 20,
