@@ -1,0 +1,11 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": "rallycoding",
+  "rules": {
+    "global-require": 0,
+    "import/no-extraneous-dependencies": 0,
+    "no-underscore-dangle": 0
+  }
+}
