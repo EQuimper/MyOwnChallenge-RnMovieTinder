@@ -2641,7 +2641,7 @@ interpret@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.0.1.tgz#d579fb7f693b858004947af39fa0db49f795602c"
 
-invariant@^2.0.0, invariant@^2.2.0:
+invariant@^2.0.0, invariant@^2.2.0, invariant@^2.2.1:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
   dependencies:
@@ -3782,12 +3782,23 @@ react-deep-force-update@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.0.1.tgz#f911b5be1d2a6fe387507dd6e9a767aa2924b4c7"
 
+react-native-collapsible@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/react-native-collapsible/-/react-native-collapsible-0.7.0.tgz#ae41f7c595a4ad49a9e3f48667ff792ea8c85f61"
+
 react-native-extended-stylesheet@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/react-native-extended-stylesheet/-/react-native-extended-stylesheet-0.3.1.tgz#45bb3fc3d44d4db9012dc13e59a28e82f393c15b"
   dependencies:
     css-mediaquery "^0.1.2"
     object-resolve-path "^1.1.0"
+
+react-native-foldview@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-foldview/-/react-native-foldview-1.1.0.tgz#829b532ed0c26b1b5103136da30abf35b461bc11"
+  dependencies:
+    invariant "^2.2.1"
+    warning "^3.0.0"
 
 "react-native-maps@git+https://github.com/exponent/react-native-maps#12853f0":
   version "0.11.0"
@@ -4850,6 +4861,12 @@ ware@^1.2.0:
   resolved "https://registry.yarnpkg.com/ware/-/ware-1.3.0.tgz#d1b14f39d2e2cb4ab8c4098f756fe4b164e473d4"
   dependencies:
     wrap-fn "^0.1.0"
+
+warning@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/warning/-/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
+  dependencies:
+    loose-envify "^1.0.0"
 
 watch@~0.10.0:
   version "0.10.0"

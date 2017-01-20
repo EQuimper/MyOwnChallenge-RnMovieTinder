@@ -43,7 +43,7 @@ class SwiperEL extends Component {
           nopeTextStyle={styles.nopeTextStyle}
         />
         <ButtonsGroup info={this._clickInfo} dislike={this._clickDislike} like={this._clickLike} />
-        <InfoModal close={this._clickInfo} visible movie={movies[this.state.cardIndex]} />
+        <InfoModal close={this._clickInfo} visible={this.state.infoModal} movie={movies[this.state.cardIndex]} />
       </View>
     );
   }

@@ -35,11 +35,11 @@ const styles = EStyleSheet.create({
   },
   titleContainer: {
     backgroundColor: 'transparent',
-    alignSelf: 'stretch',
+    width: '60%',
     justifyContent: 'center',
     alignItems: 'flex-start',
     paddingLeft: '2%',
-    flex: 0.7
+    flex: 0.4
   },
   overviewContainer: {
     backgroundColor: 'transparent',
@@ -65,27 +65,6 @@ const styles = EStyleSheet.create({
     flex: 1,
     height: null,
     width: null,
-  },
-  bottomContainer: {
-    flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    flexDirection: 'column',
-    zIndex: 1,
-    backgroundColor: '$darkBlackColor'
-  },
-  metaContainer: {
-    flex: 1,
-    height: '12%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderBottomWidth: 1,
-    alignSelf: 'stretch'
-  },
-  metaStyle: {
-    color: '$grayColor',
-    fontFamily: 'montserrat-bold',
-    fontSize: 18
   }
 });
 

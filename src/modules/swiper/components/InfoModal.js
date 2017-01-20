@@ -3,6 +3,7 @@ import { Modal, View, Text, Image, TouchableOpacity } from 'react-native';
 import { Components } from 'exponent';
 import { FontAwesome } from '@exponent/vector-icons';
 import { POSTER } from '../../../../constants/api';
+import MovieMeta from './MovieMeta';
 import styles from './styles/InfoModal';
 
 const colors = ['rgba(0, 0, 0, 1)', 'rgba(0, 0, 0, 0.7)', 'rgba(0,0,0,0.4)'];
@@ -28,17 +29,7 @@ const InfoModal = ({ visible, movie, close }) => (
             </View>
           </Components.LinearGradient>
         </View>
-        <View style={styles.bottomContainer}>
-          <View style={styles.metaContainer}>
-            <Text style={styles.metaStyle}>Rating</Text>
-          </View>
-          <View style={styles.metaContainer}>
-            <Text style={styles.metaStyle}>Release Date</Text>
-          </View>
-          <View style={styles.metaContainer}>
-            <Text style={styles.metaStyle}>Trailer</Text>
-          </View>
-        </View>
+        <MovieMeta movie={movie} />
       </View>
     </View>
   </Modal>

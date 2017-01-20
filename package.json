@@ -2,7 +2,7 @@
   "name": "movie-tinder",
   "version": "0.0.0",
   "description": "Hello Exponent!",
-  "author": null,
+  "author": "Emanuel Quimper",
   "private": true,
   "main": "main.js",
   "dependencies": {
