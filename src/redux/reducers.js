@@ -1,6 +1,9 @@
 import { combineReducers } from 'redux';
-import { HomeReducer } from '../modules';
+import { HomeReducer, InfoReducer, UIReducer, LikedMovieReducer } from '../modules';
 
 export default combineReducers({
-  home: HomeReducer
+  home: HomeReducer,
+  infoModal: InfoReducer,
+  likedMovie: LikedMovieReducer,
+  ui: UIReducer
 });
