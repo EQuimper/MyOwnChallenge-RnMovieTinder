@@ -6,7 +6,8 @@ import { MaterialIcons } from '@exponent/vector-icons';
 import {
   HomeScreen,
   IframeTrailerScreen,
-  LikedMoviesScreen
+  LikedMoviesScreen,
+  MoviesSimilarScreen
 } from './modules';
 
 const Routes = () => (
@@ -46,6 +47,11 @@ const Routes = () => (
       key="likedMovies"
       title="Your liked movies"
       component={LikedMoviesScreen}
+    />
+    <Scene
+      key="moviesSimilar"
+      title="Similar Movies"
+      component={MoviesSimilarScreen}
     />
   </Router>
 );
