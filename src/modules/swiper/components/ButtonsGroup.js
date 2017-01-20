@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, TouchableOpacity } from 'react-native';
 import { Ionicons, FontAwesome } from '@exponent/vector-icons';
-import EStyleSheet from 'react-native-extended-stylesheet';
 import Colors from '../../../../constants/Colors';
+import styles from './styles/ButtonsGroup';
 
 const ButtonsGroup = ({ like, dislike, info }) => (
   <View style={styles.root}>
@@ -23,34 +23,5 @@ const ButtonsGroup = ({ like, dislike, info }) => (
     </TouchableOpacity>
   </View>
 );
-
-const styles = EStyleSheet.create({
-  root: {
-    flex: 0.5,
-    justifyContent: 'space-around',
-    width: '80%',
-    // alignSelf: 'stretch',
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
-  buttons: {
-    width: 90,
-    height: 90,
-    borderWidth: 5,
-    borderColor: '#fff',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 45
-  },
-  buttonInfo: {
-    width: 50,
-    height: 50,
-    borderWidth: 10,
-    borderColor: '#fff',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 25
-  },
-});
 
 export default ButtonsGroup;

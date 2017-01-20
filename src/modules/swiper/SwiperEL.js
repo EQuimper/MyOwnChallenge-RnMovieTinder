@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { View, Text, Image } from 'react-native';
-import EStyleSheet from 'react-native-extended-stylesheet';
+import { View, Text } from 'react-native';
 import SwipeCards from 'react-native-swipe-cards';
-import { POSTER } from '../../../constants/api';
-import { ButtonsGroup, InfoModal } from './components';
+import { ButtonsGroup, InfoModal, Card } from './components';
+import styles from './styles/SwiperEL';
 
 class SwiperEL extends Component {
   state = { cardIndex: 0, infoModal: false }
@@ -44,81 +43,10 @@ class SwiperEL extends Component {
           nopeTextStyle={styles.nopeTextStyle}
         />
         <ButtonsGroup info={this._clickInfo} dislike={this._clickDislike} like={this._clickLike} />
-        <InfoModal close={this._clickInfo} visible={this.state.infoModal} movie={movies[this.state.cardIndex]} />
+        <InfoModal close={this._clickInfo} visible movie={movies[this.state.cardIndex]} />
       </View>
     );
   }
 }
-
-const Card = movie => (
-  <View style={styles.posterCard}>
-    <Image style={styles.poster} source={{ uri: `${POSTER}/${movie.poster_path}` }} />
-  </View>
-);
-
-const styles = EStyleSheet.create({
-  root: {
-    flex: 1,
-    backgroundColor: '$blackColor',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingTop: '2%'
-  },
-  titleContainer: {
-    flex: 0.2,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  yupStyle: {
-    borderColor: '$blueColor',
-    borderWidth: 2,
-    position: 'absolute',
-    padding: 20,
-    top: '25%',
-    borderRadius: 5,
-    left: '25%',
-  },
-  nopeStyle: {
-    borderColor: '$redColor',
-    borderWidth: 2,
-    position: 'absolute',
-    padding: 20,
-    top: '25%',
-    borderRadius: 5,
-    left: '25%',
-  },
-  nopeTextStyle: {
-    color: '$redColor'
-  },
-  yupTextStyle: {
-    color: '$blueColor'
-  },
-  titleStyle: {
-    fontSize: 20,
-    color: '#fff',
-    fontFamily: 'montserrat-regular'
-  },
-  posterCard: {
-    borderRadius: 10,
-    width: '75%',
-    height: '60%',
-    shadowOffset: {
-      width: 0.5,
-      height: 0.5,
-    },
-    shadowColor: 'black',
-    shadowOpacity: 0.8,
-  },
-  swiperContainer: {
-    flex: 1,
-    backgroundColor: '$blackColor',
-  },
-  poster: {
-    flex: 1,
-    height: null,
-    width: null,
-    borderRadius: 10
-  }
-});
 
 export default SwiperEL;
