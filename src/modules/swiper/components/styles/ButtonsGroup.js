@@ -2,7 +2,7 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 
 const styles = EStyleSheet.create({
   root: {
-    flex: 0.5,
+    flex: 0.4,
     justifyContent: 'space-around',
     width: '80%',
     flexDirection: 'row',

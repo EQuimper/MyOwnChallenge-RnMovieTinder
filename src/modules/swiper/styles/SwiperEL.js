@@ -9,9 +9,10 @@ const styles = EStyleSheet.create({
     paddingTop: '2%'
   },
   titleContainer: {
-    flex: 0.2,
+    flex: 0.1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingBottom: 5
   },
   yupStyle: {
     borderColor: '$blueColor',
@@ -44,7 +45,7 @@ const styles = EStyleSheet.create({
   },
   swiperContainer: {
     flex: 1,
-    backgroundColor: '$blackColor',
+    backgroundColor: '$blackColor'
   }
 });
 

@@ -6,7 +6,7 @@ import { ButtonsGroup, Card } from './components';
 import { InfoModal } from '../infoModal';
 import styles from './styles/SwiperEL';
 import { addMovieToLikedList } from './actions';
-import { toggleModalInfo } from '../ui';
+import { openModalInfo, closeModalInfo } from '../ui';
 
 class SwiperEL extends Component {
   state = { cardIndex: 0 }
@@ -39,7 +39,7 @@ class SwiperEL extends Component {
   }
 
   render() {
-    const { movies, modalInfoShow, toggleModalInfo } = this.props;
+    const { movies, modalInfoShow, openModalInfo, closeModalInfo } = this.props;
     return (
       <View style={styles.root}>
         <StatusBar barStyle="light-content" />
@@ -59,15 +59,15 @@ class SwiperEL extends Component {
           nopeTextStyle={styles.nopeTextStyle}
         />
         <ButtonsGroup
-          info={() => toggleModalInfo()}
+          info={() => openModalInfo(movies[this.state.cardIndex])}
           dislike={this._clickDislike}
           like={this._clickLike}
         />
         <InfoModal
-          toggleModalInfo={toggleModalInfo}
-          close={() => toggleModalInfo()}
+          closeModalInfo={closeModalInfo}
+          close={() => closeModalInfo()}
           visible={modalInfoShow}
-          movie={movies[this.state.cardIndex]}
+          movie={this.props.modalInfoMovie}
         />
       </View>
     );
@@ -76,7 +76,8 @@ class SwiperEL extends Component {
 
 export default connect(
   state => ({
-    modalInfoShow: state.ui.modalInfoShow
+    modalInfoShow: state.ui.modalInfoShow,
+    modalInfoMovie: state.ui.modalInfoMovie
   }),
-  { toggleModalInfo, addMovieToLikedList }
+  { openModalInfo, closeModalInfo, addMovieToLikedList }
 )(SwiperEL);

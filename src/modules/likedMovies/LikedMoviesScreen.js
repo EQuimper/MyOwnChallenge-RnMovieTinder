@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Actions } from 'react-native-router-flux';
 import { View, Text, Image, ScrollView, TouchableWithoutFeedback } from 'react-native';
 import { FontAwesome, MaterialIcons } from '@exponent/vector-icons';
 import { POSTER } from '../../../constants/api';
@@ -32,16 +33,20 @@ class LikedMoviesScreen extends Component {
           ))}
         </ScrollView>
         <View style={styles.getMeMovieContainer}>
-          <View style={styles.getMovieButton}>
-            <Text style={styles.getMovieText}>
-              Give me some movies
-            </Text>
-            <MaterialIcons
-              name="local-movies"
-              size={30}
-              color={Colors.blueColor}
-            />
-          </View>
+          <TouchableWithoutFeedback
+            onPress={() => Actions.moviesSimilar()}
+          >
+            <View style={styles.getMovieButton}>
+              <Text style={styles.getMovieText}>
+                Give me some movies
+              </Text>
+              <MaterialIcons
+                name="local-movies"
+                size={30}
+                color={Colors.blueColor}
+              />
+            </View>
+          </TouchableWithoutFeedback>
         </View>
       </View>
     );
