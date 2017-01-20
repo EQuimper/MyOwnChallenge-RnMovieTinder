@@ -11,7 +11,7 @@ import {
 import EStyleSheet from 'react-native-extended-stylesheet';
 import store from './src/redux/store';
 import Colors from './constants/Colors';
-import { HomeScreen } from './src/modules';
+import Routes from './src/Routes';
 
 EStyleSheet.build(Colors);
 
@@ -45,7 +45,7 @@ class App extends React.Component {
     }
     return (
       <Provider store={store}>
-        <HomeScreen />
+        <Routes />
       </Provider>
     );
   }
