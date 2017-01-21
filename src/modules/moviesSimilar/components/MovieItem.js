@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { View, Image, TouchableWithoutFeedback } from 'react-native';
 import styles from './styles/MovieItem';
 import { POSTER } from '../../../../constants/api';

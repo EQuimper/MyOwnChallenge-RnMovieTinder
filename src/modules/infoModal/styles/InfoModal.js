@@ -41,12 +41,16 @@ const styles = EStyleSheet.create({
     paddingLeft: '2%',
     flex: 0.4
   },
+  overviewContainerScroll: {
+    flex: 1,
+  },
   overviewContainer: {
     backgroundColor: 'transparent',
     width: '60%',
     justifyContent: 'center',
     alignItems: 'flex-start',
     paddingLeft: '2%',
+    marginVertical: 10,
     flex: 1,
   },
   overviewStyle: {

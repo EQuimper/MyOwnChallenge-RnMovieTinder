@@ -16,7 +16,7 @@ export const fetchMoviePopular = async () => {
 
 export const fetchMoviesSimilar = async movieId => {
   try {
-    return fetchData(`movie/${movieId}/similar`);
+    return await fetchData(`movie/${movieId}/similar`);
   } catch (err) {
     console.log(err);
   }

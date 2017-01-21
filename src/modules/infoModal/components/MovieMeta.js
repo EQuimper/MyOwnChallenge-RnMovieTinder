@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View, TouchableOpacity, Text } from 'react-native';
 import { FontAwesome } from '@exponent/vector-icons';
+import { Actions } from 'react-native-router-flux';
 import styles from './styles/MovieMeta';
 import Panel from './Panel';
 import { getMovieTrailer } from '../actions';
-import { Actions } from 'react-native-router-flux';
-// import { YT_URL } from '../../../../helpers/api';
 
 class MovieMeta extends Component {
   componentDidMount() {
@@ -35,8 +34,8 @@ class MovieMeta extends Component {
         </Panel>
         <Panel title="Trailer">
           <TouchableOpacity onPress={this._goToTrailer}>
-            <View>
-              <Text>
+            <View style={styles.buttonTrailer}>
+              <Text style={styles.buttonText}>
                 Watch here
               </Text>
             </View>

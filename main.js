@@ -25,6 +25,7 @@ class App extends React.Component {
     fontLoaded: false,
     rehydrated: false
   }
+
   async componentDidMount() {
     // await persistStore(store, {
     //   storage: AsyncStorage,

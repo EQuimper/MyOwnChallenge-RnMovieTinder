@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StatusBar } from 'react-native';
 import { connect } from 'react-redux';
 import SwipeCards from 'react-native-swipe-cards';
-import { ButtonsGroup, Card } from './components';
+import { ButtonsGroup, Card, NoMoreCard } from './components';
 import { InfoModal } from '../infoModal';
 import styles from './styles/SwiperEL';
 import { addMovieToLikedList } from './actions';
@@ -40,6 +40,9 @@ class SwiperEL extends Component {
 
   render() {
     const { movies, modalInfoShow, openModalInfo, closeModalInfo } = this.props;
+    if (this.state.cardIndex > movies.length - 1) {
+      return <NoMoreCard />;
+    }
     return (
       <View style={styles.root}>
         <StatusBar barStyle="light-content" />
@@ -53,10 +56,11 @@ class SwiperEL extends Component {
           renderCard={data => <Card {...data} />}
           handleYup={this._handleYup}
           handleNope={this._handleNope}
-          yupStyle={styles.yupStyle}
+          yupStyle={styles.yupAndNopeStyle}
           yupTextStyle={styles.yupTextStyle}
-          nopeStyle={styles.nopeStyle}
+          nopeStyle={styles.yupAndNopeStyle}
           nopeTextStyle={styles.nopeTextStyle}
+          renderNoMoreCards={() => <NoMoreCard />}
         />
         <ButtonsGroup
           info={() => openModalInfo(movies[this.state.cardIndex])}

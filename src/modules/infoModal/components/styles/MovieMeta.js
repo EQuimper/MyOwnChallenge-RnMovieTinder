@@ -35,6 +35,18 @@ const styles = EStyleSheet.create({
     fontFamily: 'montserrat-regular',
     fontSize: 16
   },
+  buttonTrailer: {
+    borderWidth: 2,
+    borderColor: '$blueColor',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  buttonText: {
+    color: '$blueColor',
+    padding: 5,
+    fontFamily: 'montserrat-regular',
+    fontSize: 14
+  }
 });
 
 export default styles;

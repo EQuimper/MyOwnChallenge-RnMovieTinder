@@ -10,6 +10,17 @@ import Colors from '../../../constants/Colors';
 
 class LikedMoviesScreen extends Component {
   render() {
+    if (this.props.data.length < 1) {
+      return (
+        <View style={styles.root}>
+          <View style={styles.container}>
+            <Text style={styles.getMovieText}>
+              No movie liked yet!
+            </Text>
+          </View>
+        </View>
+      );
+    }
     return (
       <View style={styles.root}>
         <ScrollView horizontal style={{ flex: 1 }}>

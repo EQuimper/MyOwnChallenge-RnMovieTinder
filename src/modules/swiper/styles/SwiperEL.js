@@ -14,29 +14,20 @@ const styles = EStyleSheet.create({
     alignItems: 'center',
     paddingBottom: 5
   },
-  yupStyle: {
-    borderColor: '$blueColor',
-    borderWidth: 2,
+  yupAndNopeStyle: {
     position: 'absolute',
-    padding: 20,
     top: '25%',
-    borderRadius: 5,
-    left: '25%',
-  },
-  nopeStyle: {
-    borderColor: '$redColor',
-    borderWidth: 2,
-    position: 'absolute',
-    padding: 20,
-    top: '25%',
-    borderRadius: 5,
-    left: '25%',
+    left: '20%',
   },
   nopeTextStyle: {
-    color: '$redColor'
+    color: '$redColor',
+    fontFamily: 'montserrat-bold',
+    fontSize: 75,
   },
   yupTextStyle: {
-    color: '$blueColor'
+    color: '$blueColor',
+    fontFamily: 'montserrat-bold',
+    fontSize: 75
   },
   titleStyle: {
     fontSize: 20,

@@ -8,6 +8,11 @@ const styles = EStyleSheet.create({
   movieContainer: {
     flex: 1,
   },
+  container: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1
+  },
   movieImageContainer: {
     height: '35%',
     width: '45%',

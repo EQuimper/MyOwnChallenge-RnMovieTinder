@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, View, Text, Image, TouchableOpacity } from 'react-native';
+import { Modal, View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { Components } from 'exponent';
 import { FontAwesome } from '@exponent/vector-icons';
 import { POSTER } from '../../../constants/api';
@@ -24,9 +24,11 @@ const InfoModal = ({ movie, close, closeModalInfo, visible }) => (
             <View style={styles.titleContainer}>
               <Text style={styles.titleStyle}>{movie.title}</Text>
             </View>
-            <View style={styles.overviewContainer}>
-              <Text style={styles.overviewStyle}>{movie.overview}</Text>
-            </View>
+            <ScrollView style={styles.overviewContainerScroll}>
+              <View style={styles.overviewContainer}>
+                <Text style={styles.overviewStyle}>{movie.overview}</Text>
+              </View>
+            </ScrollView>
           </Components.LinearGradient>
         </View>
         <MovieMeta movie={movie} closeModalInfo={closeModalInfo} />

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getMoviesSimilar } from './actions';
+import { getMoviesSimilar, getMoviesSimilarFirst } from './actions';
 import { LoadingScreen } from '../../commons';
 import { MoviesSimilarList } from './components';
 
@@ -11,7 +11,7 @@ class MoviesSimilarScreen extends Component {
 
   async componentDidMount() {
     this.setState({ loading: true });
-    await this.props.getMoviesSimilar(this.props.likedMovie[0].id);
+    await this.props.getMoviesSimilarFirst(this.props.likedMovie[0].id);
     this.setState({ loading: false });
   }
 
@@ -33,5 +33,5 @@ export default connect(
     likedMovie: state.likedMovie,
     moviesSimilar: state.moviesSimilar
   }),
-  { getMoviesSimilar }
+  { getMoviesSimilar, getMoviesSimilarFirst }
 )(MoviesSimilarScreen);
